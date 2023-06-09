@@ -48,34 +48,22 @@ public class Main {
                 .map(name-> name.toUpperCase())
                 .collect(Collectors.toList());
 
-        //System.out.println(upperCase);
-        //upperCase.stream().forEach(System.out::println);
+        System.out.println(upperCase);
+        upperCase.stream().forEach(System.out::println);
 
         List<String> mNames = names.stream()
                 .filter(name-> name.startsWith("m") || name.startsWith("s"))
                 .collect(Collectors.toList());
-        //mNames.stream().forEach(System.out::println);
+        mNames.stream().forEach(System.out::println);
 
         // Iterator example
         Iterator iter = names.iterator();
         while (iter.hasNext()){
-           // System.out.println(iter.next());
+            System.out.println(iter.next());
         }
         // end of iterator example
         System.out.println("With ints");
         List<Integer> numbers = Arrays.asList(5, 10, 340, 2341, 234, 23);
-        numbers.stream().forEach(System.out::println);
-        // don't need to save it to another array, since just want to print out
-        numbers.stream()
-                .filter(num -> num > 2)
-                .forEach(System.out::println);
-
-
-
-        int sum = numbers.stream()
-                .reduce(0, (total, next) -> total + next);
-                // identity is the index that it is starting at
-
 
     }
 }
